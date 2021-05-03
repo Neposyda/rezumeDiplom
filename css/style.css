@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f7fa;
+    padding: 40px; 
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+.wrapper {
+    background: #ffffff;
+    display: flex;
+}
+
+.sidebar {
+    background: #1e2939;
+    width: 370px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.my-photo {
+    max-width: 370px;
+}
+
+.about-me-container {
+    padding: 110px 90px;
+}
+
+.contacts-me-container, .skills-container {
+    margin: 60px 0px 60px 40px;
+}
+
+.contacts-title, .skills-title, .skills-title {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.contacts-link, .contacts-link-type, .skills-item {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.contacts-link {
+    color: #434c5a;
+}
+
+.contacts-link-type {
+    font-weight: bold;
+    color: white;
+    margin-right: 10px;
+}
+
+.skills-item {
+    color: orange;
+    margin-left: 15px;
+}
+
+.skills-text {
+    color: rgb(189, 187, 187);
+}
+
+.info-me-container {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px; 
+    margin-bottom: 65px;   
+}
+
+.profession-me {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 23px;
+}
+
+.name-me {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 55px;
+}
+
+.description-me {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 24px;    
+}
+
+.about-me-title {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;   
+    margin-bottom: 10px; 
+}
+
+.projects-link {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+}
+
+.tech-name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.dots {
+    color: #a8a8a8;
+}
+
+.projects-item {
+    font-weight: bold;
+    margin-left: 17px;
+}
+
+.projects-container {
+    margin-bottom: 50px;
+}
+
+.profession-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.profession-company {
+    color: #FB6D3A;
+}
+
+.profession-time {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.profession-divider {
+    color: #0000;
+}
+
+.profession-duties {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.profession-duties-item {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+}
+
+.profession-company, .education-prof {
+    margin-bottom: 10px;
+}
