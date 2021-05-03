@@ -7,8 +7,36 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 </head>
 <body> 
+
+    <!-- modal window -->
+    <form id="response-form" class="modal">        
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">×</span>
+                <h2>Вдячний за відгук )))</h2>
+            </div>
+            <div class="modal-body">
+                <div class="sender-name element-modal-body">
+                    <input id="input-name" name="to_name" type="text" placeholder="Ваше ім'я">
+                </div>
+                <div class="sender-email element-modal-body">
+                    <input id="input-email" name="email_to" type="email" placeholder="Ваша електронна адреса">
+                </div>
+                <div class="text-message element-modal-body">
+                    <textarea id="message" name="message" cols="40" rows="10" placeholder="Напишіте ваше повідомлення сюди..."></textarea>
+                </div>
+                <div class="send element-modal-body">
+                    <input id="send" type="submit" value="Відправити">
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
     <!--- main container --->   
     <div class="wrapper">
         <aside class="sidebar">
@@ -23,7 +51,8 @@
                     <span class="contacts-link-type">C:</span> <a class="contacts-link" href="tell: 380951138598">+38 095 113 85 98</a>
                 </div>
                 <div>
-                <span class="contacts-link-type">E:</span> <a class="contacts-link" href="mailto: chornyiav@gmail.com">chornyiav@gmail.com</a>
+                    <span class="contacts-link-type">E:</span> <a id="open-modal" class="contacts-link" href="#">chornyiav@gmail.com</a>
+                    <!-- <span class="contacts-link-type">E:</span> <a id="open-modal" class="contacts-link" href="#" >chornyiav@gmail.com</a> -->
                 </div>
             </div>
 
@@ -176,4 +205,6 @@
             </div>
         </div>       
     </div>
+    <script type="text/javascript" src="main.js"></script>
+</body>
 </html>

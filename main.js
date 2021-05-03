@@ -1,34 +1,22 @@
-//alert("Hello JS Marathone!");
-
-// 2.1
-const firstRow = 'мама мыла раму';
-const secondRow = 'собака друг человека';
-
-function countLettA (myText) {
-  let countA=0;
-   for (let i = 0; i < myText.length; i++) {
-    countA += myText.charAt(i) === 'а';
-  }
-  return countA;
+var response_form = document.getElementById('response-form');
+var openModal = document.getElementById("open-modal");
+var span = document.getElementsByClassName("close")[0];
+openModal.onclick = function() {
+	response_form.style.display = "block";
+}
+span.onclick = function() {
+	response_form.style.display = "none";
 }
 
-function getRow(firstRow, secondRow) {
-  return ((countLettA(firstRow) > countLettA(secondRow)) ? firstRow : secondRow); 
+window.onload = function() {
+	response_form.addEventListener('submit', function(event) {
+		event.preventDefault();
+        emailjs.sendForm('service_rxx4kdc', 'response-form', '#response-form', "user_BZQUP7Cepb0tnErGl5qD8")
+            .then(function() {
+            	response_form.style.display = "none";
+                console.log('SUCCESS!');
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+    });
 }
-
-console.log(getRow(firstRow, secondRow));
-
-// 2.2
-function formattedPhone(phone) {
-  let formattPhone = '';
-  for (let i = 0; i < phone.length; i++) {    
-    formattPhone += phone.charAt(i);
-    if (i === 1) formattPhone += ' (';
-    if (i === 4) formattPhone += ') ';
-    if (i === 7) formattPhone += '-';
-    if (i === 9) formattPhone += '-';
-  }
-  return formattPhone;
-}
-
-console.log(formattedPhone('+71234567890')); // +7 (123) 456-78-90
