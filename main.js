@@ -1,6 +1,13 @@
 var response_form = document.getElementById('response-form');
 var openModal = document.getElementById("open-modal");
 var span = document.getElementsByClassName("close")[0];
+var tech_skills = document.getElementById("tech-skills");
+var soft_skills = document.getElementById("soft-skills");
+var skills_list = document.getElementsByName("skills-list");
+var newDiv = document.createElement("div");
+newDiv.setAttribute("class", "skills-detail");
+newDiv.setAttribute("name", "skills-detail");
+
 openModal.onclick = function() {
     clearResponseForm ();
 	response_form.style.display = "block";
@@ -9,6 +16,20 @@ span.onclick = function() {
 	response_form.style.display = "none";
     clearResponseForm ();
 }
+
+skills_list.forEach((list) => list.onclick = function(event) {    
+    var selectedLi = (event.target.nodeName === "LI")?event.target:event.target.parentElement;
+     if (selectedLi.lastElementChild === newDiv) {
+        selectedLi.removeChild(newDiv);
+        newDiv.innerText = "";
+     }
+     else
+     {
+        var nameScill = selectedLi.firstElementChild.innerText;    
+        newDiv.innerText = myGlossary[nameScill];
+        selectedLi.appendChild(newDiv);        
+     }
+});
 
 window.onload = function() {
 	response_form.addEventListener('submit', function(event) {
@@ -33,7 +54,7 @@ function clearResponseForm () {
 var myGlossary = {
     "HTML5": "5-та версія мови розмітки HTML",
     "CSS3" : "це спеціальна мова стилю вебсторінок, що використовується для опису їхнього зовнішнього вигляду",
-    "JavaScript" : " динамічна, об'єктно-орієнтована[4] прототипна мова програмування",
+    "JavaScript" : " динамічна, об'єктно-орієнтована прототипна мова програмування",
     "GIT" : "розподілена система керування версіями файлів та спільної роботи",
     "WebPack" : "один из самых мощных и гибких инструментов для сборки frontend",
     "React.js" : "відкрита JavaScript бібліотека для створення інтерфейсів користувача, яка покликана вирішувати проблеми часткового оновлення вмісту веб-сторінки, з якими стикаються в розробці односторінкових застосунків",
