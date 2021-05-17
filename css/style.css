@@ -49,7 +49,8 @@ body {
 }
 
 .contacts-link {
-    color: #434c5a;
+    color: rgb(189, 187, 187);
+    text-decoration: none;
 }
 
 .contacts-link-type {
@@ -63,6 +64,14 @@ body {
     margin-left: 15px;
 }
 
+.contacts-link:hover,
+.contacts-link:focus,
+.skills-item:hover,
+.skills-item:focus {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .skills-text {
     color: rgb(189, 187, 187);
 }
@@ -73,7 +82,6 @@ body {
     border: 0;
     border-left: 2px solid orange;
 }
-
 
 .info-me-container {
     font-weight: normal;
@@ -145,8 +153,17 @@ body {
     margin-bottom: 15px;
 }
 
-.profession-company {
+.profession-company, 
+.profession-company:visited {
     color: #FB6D3A;
+}
+.profession-company {
+    font-weight: 600;
+    text-decoration: none; 
+}
+
+.profession-company:hover {
+    text-decoration: underline; 
 }
 
 .profession-time {
@@ -157,7 +174,8 @@ body {
 }
 
 .profession-divider {
-    color: #0000;
+    color: bold;
+    /* font-weight: 300; */
 }
 
 .profession-duties {
@@ -186,7 +204,7 @@ body {
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
+    width: 100%; /* Full widtnoneh */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
@@ -212,8 +230,6 @@ input, textarea {
     padding: 0;
     border: 5px solid #f5f7fa;
     max-width: 400px;
-    /* width: 50%; */
-    /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);*/
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
@@ -252,9 +268,3 @@ input, textarea {
 }
 
 .modal-body {padding: 2px 16px;}
-
-/*.modal-footer {
-    padding: 2px 16px;
-    background-color: #1e2939;
-    color: white;
-}*/
